@@ -11,7 +11,7 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\Auth\AuthController  ;
-Route::middleware('guest:admin')->group(function () {
+Route::middleware('guest:admin')->group(function () { 
     Route::get('register', [RegisteredUserController::class, 'create'])
                 ->name('register');
 
