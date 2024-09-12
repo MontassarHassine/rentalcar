@@ -17,6 +17,11 @@ class AuthController extends Controller
         ]) ;
 
         $check = Auth::guard('admin')->attempt($data);
+
+        if(!$check)
+          {
+            return "incorrect credentials" ;
+          }
         $admin = Auth::guard('admin')->user();
        Auth::login($admin);
       return redirect()->route('dashboard') ;
