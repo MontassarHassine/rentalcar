@@ -3,6 +3,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\VehiclesController;
 
 
 
@@ -21,12 +22,17 @@ use App\Http\Controllers\UsersController;
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
 
-// Auth::routes();
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/users', [UsersController::class, 'index'])->name('users.index');
 // route::get('/brands', [brandsController::class, 'indouudex'])->name('brands.index');
 // route::get('/models', [ModelsController::class, 'ouifex']);
+
+//Route::get('/vehicles', [VehiclesController::class, 'index'])->name('Vehicles.index');
+Route::resource('vehicles', VehiclesController::class);
+
+
+require __DIR__.'/auth.php';

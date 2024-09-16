@@ -9,6 +9,7 @@ class Vehicles extends Model
 {
     use HasFactory;
     protected $fillable =[
-        'model', 'brand', 'energy', 'availability'
+        'brand', 'model', 'energy', 'availability'
     ];
 }
+    

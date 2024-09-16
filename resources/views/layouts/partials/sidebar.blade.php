@@ -7,9 +7,13 @@
                 Dashboard
             </a>
 
-            <a class="nav-link" href="{{url('admin/category')}}">
+            <a class="nav-link" href="{{url('/users')}}">
                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                Category
+                Users
+            </a>
+            <a class="nav-link" href="{{url('/vehicles')}}">
+                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                Vehicles
             </a>
             <div class="sb-sidenav-menu-heading">Interface</div>
             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseBrands" aria-expanded="false" aria-controls="collapseBrands">
